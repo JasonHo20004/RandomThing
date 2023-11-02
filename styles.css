@@ -1,0 +1,108 @@
+body {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+#background-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust the alpha value (fourth parameter) to control transparency */
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+    margin: auto;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+
+
+.title {
+    color: #865bda;
+    margin-bottom: 20px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: 'Playpen Sans', cursive;
+    font-size: larger;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.message {
+    color: #8d54ff;
+    margin-top: 20px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: 'Playpen Sans', cursive;
+    font-size: large;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.photo-corner {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container .message-box {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+    top: 50%;
+    left: -330px;
+    transform: translateY(-50%);
+    z-index: 1;
+    max-width: 300px; /* Giới hạn chiều rộng tối đa của hộp tin nhắn */
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: 'Playpen Sans', cursive;
+    font-size: normal;
+
+}
+
+.image-container:hover .message-box {
+    display: block;
+}
+
+.photo-corner img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.photo-corner img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
